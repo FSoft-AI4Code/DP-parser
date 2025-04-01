@@ -1,0 +1,7 @@
+tree-sitter
+tree-sitter-python
+tree-sitter-languages
+numpy
+plotly
+networkx
+scipy

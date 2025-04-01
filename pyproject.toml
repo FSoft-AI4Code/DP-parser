@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dp-parser"
+version = "0.1.0"
+authors = [
+    {name = "nmd2k"}
+]
+description = "A package for parsing and analyzing code dependency graphs"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "networkx>=3.0",
+    "astroid>=3.0",
+    "click>=8.0",
+    "tree-sitter",
+    "tree-sitter-python",
+    "tree-sitter-languages",
+    "tqdm"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "isort>=5.0",
+]
+
+[project.scripts]
+dp-parser = "dp_graph.__cli__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
