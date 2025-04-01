@@ -1,4 +1,4 @@
-# DG-Parser
+# Dependency graph parser (DP-parser)
 
 A Python package for parsing and analyzing code dependency graphs.
 
